@@ -163,11 +163,11 @@ button {
   padding: 4px 9px;
   border-style: solid;
   border-width: 1px;
-  border-radius: 12px;
+  border-radius: 6px;
   color: #000000;
   border-color: #000000;
   background-color: #efe8ef;
-  -gtk-outline-radius: 5px;
+  -gtk-outline-radius: 2px;
   
   outline-offset: 2px;
   outline-style: solid;
@@ -185,7 +185,7 @@ button {
     border-color: #9a9a9a; }
   button.flat {
     border-color: transparent;
-    border-radius: 3px;
+    border-radius: 2px;
     color: #000000;
     background-color: transparent;
     box-shadow: none; }
@@ -193,7 +193,7 @@ button {
       border-color: #616161;
       color: #000000;
       background-color: #efe8ef;
-      -gtk-outline-radius: 3px;
+      -gtk-outline-radius: 2px;
        }
     button.flat:active, button.flat:checked {
       background-color: transparent;
@@ -720,11 +720,11 @@ menu, .menu {
     min-width: 16px;
     min-height: 16px; }
     menu > arrow.top, .menu > arrow.top {
-      margin-top: -6px;
+      margin-top: 0px;
       border-bottom: 1px solid #efe8ef;
       -gtk-icon-source: -gtk-icontheme("pan-up-symbolic"); }
     menu > arrow.bottom, .menu > arrow.bottom {
-      margin-bottom: -6px;
+      margin-bottom: 0px;
       border-top: 1px solid #efe8ef;
       -gtk-icon-source: -gtk-icontheme("pan-down-symbolic"); }
 
@@ -756,7 +756,7 @@ menubar > menuitem, .menubar > menuitem {
 menu menuitem, .menu menuitem {
   min-height: 16px;
   min-width: 40px;
-  padding: 4px;
+  padding: 2px;
   border: none;
   border-radius: 0;
   color: #000000;
@@ -765,7 +765,7 @@ menu menuitem, .menu menuitem {
     color: #000000;
     background-color: #ccccFF; }
     menu menuitem:hover switch slider, menu menuitem:hover scale highlight, menu menuitem:hover scale slider, .menu menuitem:hover switch slider, .menu menuitem:hover scale highlight, .menu menuitem:hover scale slider {
-      background-color: #FFFFFF; }
+      background-color: transparent; }
     menu menuitem:hover scale trough, menu menuitem:hover switch, .menu menuitem:hover scale trough, .menu menuitem:hover switch {
       background-color: rgba(255, 255, 255, 0.75); }
   menu menuitem:disabled, .menu menuitem:disabled {
@@ -1051,10 +1051,12 @@ progressbar {
   progressbar progress {
     border: 1px solid #000055;
     border-radius: 0px;
-    background-image: linear-gradient(to bottom, #333399, #FFFFFF, #000055);
+    background-image: url("assets/progress.png");
+    background-repeat: repeat; 
     box-shadow: inset 2px 2px rgba(255, 255, 255, 0.4), inset -2px -2px rgba(0, 0, 0, 0.6); }
   progressbar.vertical progress {
-    background-image: linear-gradient(to right, #333399, #FFFFFF, #000055); }
+    background-image: url("assets/progress.png");
+    background-repeat: repeat; }
   progressbar trough {
     border: 1px solid black;
     border-radius: 0px;
@@ -1411,18 +1413,7 @@ spinbutton.vertical button.down {
   border-top-left-radius: 0;
   border-top-right-radius: 0; }
 
-@keyframes spin {
-  to {
-    -gtk-icon-transform: rotate(1turn); } }
-spinner {
-  background: none;
-  opacity: 0;
-  -gtk-icon-source: -gtk-icontheme("process-working-symbolic"); }
-  spinner:checked {
-    opacity: 1;
-    animation: spin 1s linear infinite; }
-    spinner:checked:disabled {
-      opacity: 0.5; }
+
 
 statusbar {
   padding: 4px;
@@ -2128,7 +2119,7 @@ searchbar {
   border-width: 1px;
   border-style: solid;
   border-color: #666699;
-  border-radius: 3px;
+  border-radius: 2px;
   background-image: none;
   box-shadow: none;
   outline-style: none;
@@ -2163,7 +2154,7 @@ searchbar {
     border-width: 1px;
     border-style: solid;
     border-color: #666699;
-    border-radius: 3px;
+    border-radius: 2px;
     box-shadow: none;
     background-image: none;
     background-color: #bebebe;
@@ -2243,7 +2234,7 @@ button.destructive-action {
   border-width: 1px;
   border-style: solid;
   border-color: #a30000;
-  border-radius: 3px;
+  border-radius: 2px;
   color: #fae6e6;
   background-color: #CC0000; }
   button.destructive-action:hover {
@@ -2282,7 +2273,7 @@ headerbar.selection-mode, toolbar.selection-mode {
     border-width: 1px;
     border-style: solid;
     border-color: #e0e0ff;
-    border-radius: 3px;
+    border-radius: 2px;
     color: #7a7acc;
     background-color: #e0e0ff; }
     headerbar.selection-mode button:hover, toolbar.selection-mode button:hover {
@@ -2588,7 +2579,7 @@ panel-toplevel.background na-tray-applet {
     padding: 4px 9px;
     border-style: solid;
     border-width: 1px;
-    border-radius: 3px;
+    border-radius: 2px;
     color: #000000;
     border-color: #616161;
     background-color: #efe8ef;
@@ -2670,13 +2661,7 @@ UnityPanelWidget, .unity-panel {
     border-width: 0 1px;
     color: #000000; }
 
-@keyframes playbackmenuitem_spinner {
-  to {
-    -gtk-icon-transform: rotate(1turn); } }
-.menu IdoPlaybackMenuItem.menuitem:active {
-  -gtk-icon-source: -gtk-icontheme("process-working-symbolic");
-  animation: playbackmenuitem_spinner 1s infinite linear;
-  color: #ccccFF; }
+
 
 /* GTK NAMED COLORS - use responsibly! */
 /* widget text/foreground color */
@@ -2736,4 +2721,7 @@ read if you used those and something break with a version upgrade you're on your
 @define-color wm_button_active_color_c shade(#efe8ef, 0.9);
 @define-color content_view_bg #FFFFFF;
 
+@keyframes spin { to { -gtk-icon-transform: rotate(1turn); } }
+
+spinner { background: none; opacity: 0; -gtk-icon-source: -gtk-icontheme("process-working-symbolic"); }
 
