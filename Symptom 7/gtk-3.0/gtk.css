@@ -160,7 +160,7 @@ button:link, button:visited {
     text-decoration-line: underline; }
 
 button {
-  padding: 4px 9px;
+  padding: 4px 6px;
   border-style: solid;
   border-width: 1px;
   border-radius: 6px;
@@ -678,7 +678,7 @@ popover.background.touch-selection, .csd popover.background.touch-selection {
 button.circular, button.circular-button {
   padding: 0;
   min-width: 16px;
-  min-height: 24px;
+  min-height: 16px;
   padding: 2px 6px;
   border-radius: 50%;
   -gtk-outline-radius: 50%; }
@@ -739,7 +739,7 @@ menubar, .menubar {
     background-color: #efe8ef; }
 
 menubar > menuitem, .menubar > menuitem {
-  padding: 3px 5px;
+  padding: 2px 5px;
   border: none;
   color: #000000;
   background-color: transparent; }
@@ -826,7 +826,7 @@ modelbutton.flat, menuitem.button.flat, .menuitem.button.flat {
     color: #000000;
     background-color: #ccccFF; }
   modelbutton.flat > image, menuitem.button.flat > image, .menuitem.button.flat > image {
-    padding-right: 4px; }
+    padding-right: 2px; }
   modelbutton.flat arrow.left, menuitem.button.flat arrow.left, .menuitem.button.flat arrow.left {
     -gtk-icon-source: -gtk-icontheme("pan-start-symbolic"); }
   modelbutton.flat arrow.right, menuitem.button.flat arrow.right, .menuitem.button.flat arrow.right {
@@ -864,7 +864,7 @@ notebook {
       box-shadow: none;
       background-color: #FFFFFF; }
   notebook tab {
-    padding: 6px 20px;
+    padding: 3px 20px;
     border-width: 1px;
     border-style: solid;
     border-radius: 0px;
@@ -1053,7 +1053,7 @@ progressbar {
     border-radius: 0px;
     background-image: url("assets/progress.png");
     background-repeat: repeat; 
-    box-shadow: inset 2px 2px rgba(255, 255, 255, 0.4), inset -2px -2px rgba(0, 0, 0, 0.6); }
+     }
   progressbar.vertical progress {
     background-image: url("assets/progress.png");
     background-repeat: repeat; }
@@ -1246,7 +1246,7 @@ scrollbar {
   scrollbar.overlay-indicator {
     opacity: 1; }
   scrollbar.horizontal slider {
-    min-width: 45px;
+    min-width: 14px;
     min-height: 14px;
     margin: 0;
     border: 1px solid #4040dd;
@@ -1271,7 +1271,7 @@ scrollbar {
       background-image: url("assets/arrow-left.png"); }
   scrollbar.vertical slider {
     min-width: 14px;
-    min-height: 45px;
+    min-height: 14px;
     margin: 0;
     border: 1px solid #4040dd;
     border-top-color: #ccccff;
@@ -1497,7 +1497,7 @@ colorswatch:disabled {
 button.color {
   padding: 0; }
   button.color colorswatch:first-child:last-child, button.color colorswatch:first-child:last-child overlay {
-    margin: 4px;
+    margin: 2px;
     border-radius: 0; }
 
 colorchooser .popover.osd {
@@ -1537,7 +1537,7 @@ headerbar, headerbar:not(.titlebar) {
   background-size: 100% 36px;
   background-repeat: no-repeat repeat;*/
   background-color: #efe8ef;
-  box-shadow: inset 0 0 0 3px #ccccff, inset 1px 1px white, inset -1px -1px #a8a8a8;
+  box-shadow: inset 0 0 0 2px #ccccff;
   border-bottom: 1px solid #666699; }
   headerbar:backdrop, headerbar:not(.titlebar):backdrop {
     box-shadow: none;
@@ -1594,7 +1594,7 @@ headerbar, headerbar:not(.titlebar) {
       color: #373737;
       padding: 2px 6px;
       box-shadow: none;
-      border-color: #9a9a9a; }
+      border-color: transparent; }
   headerbar entry, headerbar:not(.titlebar) entry {
     padding: 2px 6px; }
   headerbar.titlebar, .titlebar headerbar, headerbar:not(.titlebar).titlebar, .titlebar headerbar:not(.titlebar) {
@@ -1680,7 +1680,7 @@ toolbar {
     border-width: 1px;
     border-radius: 0px;
     color: #000000;
-    border-color: #666699;
+    border-color: transparent;
     background-color: #efe8ef;
     -gtk-outline-radius: 0px;
     
@@ -1697,7 +1697,7 @@ toolbar {
     .primary-toolbar button:disabled, .primary-toolbar .raised button:disabled {
       color: #373737;
       box-shadow: none;
-      border-color: #9a9a9a; }
+      border-color: transparent; }
 
 .inline-toolbar {
   padding: 1px;
