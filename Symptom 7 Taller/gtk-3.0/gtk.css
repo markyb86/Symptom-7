@@ -1530,8 +1530,8 @@ colorchooser #add-color-button {
   padding-right: 0; }
 
 headerbar, headerbar:not(.titlebar) {
-  padding: 4px 8px;
-  min-height: 32px;
+  padding: 2px 8px;
+  min-height: 22px;
   color: #000000;
   /*background-image: url("assets/titlebar.png");
   background-size: 100% 36px;
@@ -1558,6 +1558,8 @@ headerbar, headerbar:not(.titlebar) {
   headerbar .title, headerbar:not(.titlebar) .title {
     padding-left: 12px;
     padding-right: 12px;
+    padding-top:6px;
+    padding-bottom:5px;
     margin-top: 0px;
     margin-bottom: 0px;
     font-weight: bold;
@@ -1569,10 +1571,11 @@ headerbar, headerbar:not(.titlebar) {
     padding-right: 12px;
     background-color: #efe8ef; }
   headerbar button, headerbar:not(.titlebar) button {
-    padding: 4px 9px;
+    padding: 2px 6px;
+    margin: 2px;
     border-style: solid;
-    border-width: 0px;
-    border-radius: 0px;
+    border-width: 1px;
+    border-radius: 6px;
     color: #000000;
     border-color: #666699;
     background-color: #efe8ef;
@@ -1584,21 +1587,23 @@ headerbar, headerbar:not(.titlebar) {
        }
       headerbar button:active:disabled, headerbar button:checked:disabled, headerbar:not(.titlebar) button:active:disabled, headerbar:not(.titlebar) button:checked:disabled {
         color: #efe8ef;
+        padding: 2px 6px;
         box-shadow: none;
         border-color: #848484; }
     headerbar button:disabled, headerbar:not(.titlebar) button:disabled {
       color: #373737;
+      padding: 2px 6px;
       box-shadow: none;
       border-color: #9a9a9a; }
   headerbar entry, headerbar:not(.titlebar) entry {
-    padding: 4px 8px; }
+    padding: 2px 6px; }
   headerbar.titlebar, .titlebar headerbar, headerbar:not(.titlebar).titlebar, .titlebar headerbar:not(.titlebar) {
     border-radius: 0px 0px 0px 0px; }
   headerbar .titlebutton.close, headerbar .titlebutton.maximize, headerbar .titlebutton.minimize, headerbar .titlebutton:not(separator), headerbar:not(.titlebar) .titlebutton.close, headerbar:not(.titlebar) .titlebutton.maximize, headerbar:not(.titlebar) .titlebutton.minimize, headerbar:not(.titlebar) .titlebutton:not(separator) {
     color: transparent;
     padding: 0;
-    min-width: 17px;
-    min-height: 17px;
+    min-width: 12px;
+    min-height: 12px;
     box-shadow: none;
     border: none;
     border-radius: 0;
@@ -1615,7 +1620,7 @@ headerbar, headerbar:not(.titlebar) {
     background: #efe8ef; }
 
 toolbar {
-  padding: 4px;
+  padding: 2px;
   border: none;
   color: #000000;
   background-color: #efe8ef; }
@@ -1626,10 +1631,10 @@ toolbar {
     color: #6e6e6e;
     background-color: #d1d1d1; }
   toolbar button.flat {
-    border-color: transparent;
+    border-color: #efe8ef;
     border-radius: 0px;
     color: #000000;
-    background-color: transparent;
+    background-color: #efe8ef;
     box-shadow: none; }
     toolbar button.flat:hover {
       border-color: #666699;
@@ -1638,28 +1643,28 @@ toolbar {
       -gtk-outline-radius: 0px;
        }
     toolbar button.flat:active, toolbar button.flat:checked {
-      background-color: transparent;
+      background-color: #efe8ef;
        }
       toolbar button.flat:active:backdrop, toolbar button.flat:checked:backdrop {
         color: #FFFFFF; }
     toolbar button.flat:disabled {
-      border-color: transparent;
+      border-color: #efe8ef;
       color: rgba(0, 0, 0, 0.8);
-      background-color: transparent; }
+      background-color: #efe8ef; }
       toolbar button.flat:disabled:backdrop {
         border-color: transparent;
         color: rgba(0, 0, 0, 0.7);
-        background-color: transparent; }
+        background-color: #efe8ef; }
     toolbar button.flat:backdrop {
       border-color: transparent;
-      background-color: transparent;
+      background-color: #efe8ef;
       color: #000000; }
   toolbar menubar {
     -GtkToolbar-button-relief: normal; }
 
 .primary-toolbar {
   -GtkWidget-window-dragging: true;
-  padding: 4px;
+  padding: 2px;
   border-width: 0 0 1px 0;
   border-style: solid;
   border-color: #000000;
@@ -1670,7 +1675,7 @@ toolbar {
     color: #000000;
     background-color: #efe8ef; }
   .primary-toolbar button, .primary-toolbar .raised button {
-    padding: 4px 9px;
+    padding: 2px 6px;
     border-style: solid;
     border-width: 1px;
     border-radius: 0px;
@@ -1683,7 +1688,7 @@ toolbar {
     outline-style: solid;
     outline-color: rgba(0, 0, 0, 0.5); }
     .primary-toolbar button:active, .primary-toolbar button:checked, .primary-toolbar .raised button:active, .primary-toolbar .raised button:checked {
-      background-color: transparent;
+      background-color: #efe8ef;
       box-shadow: inset -2px -2px #666699, inset -1px -1px #ccccff, inset 2px 2px #666699, inset 1px 1px #666699; }
       .primary-toolbar button:active:disabled, .primary-toolbar button:checked:disabled, .primary-toolbar .raised button:active:disabled, .primary-toolbar .raised button:checked:disabled {
         color: #0b0b0b;
@@ -1705,7 +1710,7 @@ toolbar {
     border-color: #b0b0b0;
     background-color: #efe8ef; }
   .inline-toolbar toolbutton > button {
-    padding: 4px 9px;
+    padding: 2px 6px;
     border-style: solid;
     border-width: 1px;
     border-radius: 3px;
@@ -1718,7 +1723,7 @@ toolbar {
     outline-style: solid;
     outline-color: rgba(0, 0, 0, 0.5); }
     .inline-toolbar toolbutton > button:active, .inline-toolbar toolbutton > button:checked {
-      background-color: transparent;
+      background-color: #efe8ef;
       box-shadow: inset -2px -2px #e6e6e6, inset -1px -1px #ccccff, inset 2px 2px #666699, inset 1px 1px #666699; }
       .inline-toolbar toolbutton > button:active:disabled, .inline-toolbar toolbutton > button:checked:disabled {
         color: #0b0b0b;
